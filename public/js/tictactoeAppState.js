@@ -90,7 +90,6 @@ export default class TodoAppState extends Immutable.Record({
     return this.set('game', updatedGame);
   }
 
-  /* returns true iff all items are complete */
   isGameOver(game, playerSymbol) {
     const n = 3;
     const count = n * n;
