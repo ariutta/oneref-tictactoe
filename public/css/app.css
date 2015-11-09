@@ -1,0 +1,209 @@
+/**
+ * We are not changing from display:none, but rather re-rendering instead.
+ * Therefore this needs to be displayed normally by default.
+ */
+
+@import url('//fonts.googleapis.com/css?family=Lato:400,900');
+
+html,body{
+  height:100%;
+}
+
+body {
+  font-size: 12px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #212121;
+  margin:0px auto;
+  background: #e9ece5;
+}
+
+/* styling for google sign in button */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+#customBtn {
+  display: inline-block;
+  background: #4285f4;
+  color: white;
+  width: 190px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+#customBtn:hover {
+  cursor: pointer;
+}
+span.icon {
+  background: url('//developers.google.com/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+  border-right: #2265d4 1px solid;
+}
+span.buttonText {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 42px;
+  padding-right: 42px;
+  font-size: 14px;
+  font-weight: bold;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 2em;
+  margin: 0.67em;
+  display: inline;
+}
+
+#main {
+  min-height: 200px;
+  margin: 0px;
+  padding: 0px;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+}
+
+#main > article {
+  margin: 4px;
+  padding: 15px;
+  -webkit-flex: 3 1 60%;
+  flex: 3 1 60%;
+  -webkit-order: 2;
+  order: 2;
+}
+
+#main > nav {
+  max-width: 300px;
+  margin: 4px;
+  padding: 5px;
+  -webkit-flex: 1 6 40%;
+  flex: 1 6 40%;
+  -webkit-order: 1;
+  order: 1;
+}
+
+header, footer {
+  display: block;
+  margin:0px auto;
+  padding: 0px;
+  min-height: 16px;
+  color: #e9ece5;
+}
+
+header {
+  background: #3b3a36;
+}
+
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+
+  #main, #page {
+    -webkit-flex-flow: column;
+    flex-direction: column;
+  }
+
+  #main > article, #main > nav {
+    /* Return them to document order */
+    -webkit-order: 0;
+    order: 0;
+  }
+
+  #main > nav, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+  }
+}
+
+ul {
+  list-style: none;
+  height: 75vmin;
+  width: 75vmin;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  margin: auto;
+  padding: 0px;
+}
+
+.cell {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 27%;
+  -ms-flex: 0 0 27%;
+  flex: 0 0 27%;
+  height: 27%;
+  margin: 2%;
+  color: #212121;
+  border-radius: 3pt;
+  background: #c0dfd9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(33,33,33,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(33,33,33,1);
+  box-shadow: 10px 10px 5px 0px rgba(33,33,33,1);
+}
+
+.cell.win-path {
+  background: #4CAF50;
+}
+
+.cell.cats {
+  background: #F44336;
+}
+
+.cell:not(.playable) {
+  pointer-events: none;
+}
+
+.cell.playable:hover {
+  background: #b3c2bf;
+}
+
+.box-content {
+  font-size: 15vmin;
+}
+
+.badge {
+  background: #f4f4f4;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  clear: both;
+  float: left;
+  display: block;
+  position: relative;
+}
+
+.badge-picture {
+  float: left;
+  width: 96px;
+  height: 96px;
+}
+
+.badge-text {
+  float: right;
+  margin: 7px;
+}
+
+.versus {
+  margin: 7px;
+  clear: both;
+  float: left;
+  display: block;
+  position: relative;
+}
+
+button {
+  padding: 7px;
+  font-size: 16px;
+}
