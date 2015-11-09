@@ -7,7 +7,7 @@ A demo/learning project for OneRef.
 Clone the repo:
 
 ```
-git clone git@bitbucket.org:ariutta/tictactoe.git
+git clone git@github.com:ariutta/oneref-tictactoe.git
 ```
 
 `cd` into the new directory and install the server dependencies:
